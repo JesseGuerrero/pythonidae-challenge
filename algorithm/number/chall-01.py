@@ -22,7 +22,7 @@ def primeFactorzation():
         if is_prime(N):
             prime_factors.append(N)
             break
-        for prime in filter(is_prime, range(0, N)):
+        for prime in filter(is_prime, range(0, N)):#Start with smallest
             if N % prime == 0:
                 prime_factors.append(prime)
                 N = int(N/prime)

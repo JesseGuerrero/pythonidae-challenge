@@ -3,7 +3,7 @@ import re
 long_text = "this is 0.0.0.0 and 255.255.255.255 or even 192.34.12.8"
 reg = "((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])"
 
-# looping regex exp
+# search string for regex, making a string list
 i = 0
 ips = []
 while(True):
