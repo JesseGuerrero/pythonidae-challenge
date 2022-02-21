@@ -16,9 +16,11 @@ def randomUnicode():
 changedChars = 0
 for i in range(0, len(S)):
     O = random.randint(1, 10)
+    N = random.randint(1, O)
     if i % O == 0:
-        S = S[:i] + randomUnicode() + S[(i+1):]
-        changedChars+=1
+        for k in range(i, i+N):
+            S = S[:k] + randomUnicode() + S[(k+1):]
+            changedChars+=1
 
 print(S)
 print("Ratio: " + str(changedChars) + "/" + str(len(S)) + " changed chars...")
